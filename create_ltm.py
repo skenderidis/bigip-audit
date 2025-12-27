@@ -569,6 +569,7 @@ def build_word(results, diagnostics, customer_name):
 
     problems_found = run_audit(results)
 
+    document.add_paragraph()
 
     document.add_paragraph(
         "The following table provides the summary of all the Issues that have been identified on the BIGIP Device during our audit."

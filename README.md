@@ -92,7 +92,7 @@ One or more ASM policy JSON files placed in the **policies/** directory.
 
 > **IMPORTANT**
 > 
-> The policies needs to be exported from ASM in `FULL` and NOT in `TEMPLATE` mode. 
+> The policies needs to be exported from ASM in `Full` and NOT in `Template-Based` mode. 
 
 Run the Python script, providing the customer name
 
@@ -100,7 +100,7 @@ Run the Python script, providing the customer name
 python create_asm.py --customer "ACME Bank"
 ```
 
-## Support
+## Examples
 
-For support, please open a GitHub issue.  Note, the code in this repository is community supported and is not supported by F5 Networks.  For a complete list of supported projects please reference [SUPPORT.md](SUPPORT.md).
+You can find examples of both LTM and ASM reports under the **reports** folder.
 
