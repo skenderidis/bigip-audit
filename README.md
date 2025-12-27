@@ -30,27 +30,33 @@ Dependencies:
 
 
 1. Clone the repo to your PC
-
-```
-git clone https://github.com/skenderidis/bigip-audit
-```
+    ```
+    git clone https://github.com/skenderidis/bigip-audit
+    ```
 
 2. Using a virtual environment is strongly recommended.
-```
-python3 -m venv .venv
-source .venv/bin/activate
-```
+    ```
+    python3 -m venv .venv
+    source .venv/bin/activate
+    ```
 
 3. After activating the virtual environment, install dependencies:
-```
-pip install -r requirements.txt
-```
+    ```
+    pip install -r requirements.txt
+    ```
 4. Ready to create your LTM/ASM report.
+
+5. Once you finish, you can deactivate the virtual environment
+    ```
+    deactivate
+    ```
+
 
 ## How to use the tool
 
 ### LTM report
-1. For the LTM report you will need valid F5 iHealth API credentials (**CLIENT_ID** and **CLIENT_SECRET**). These can be acquired from (https://ihealth.f5.com/qkview-analyzer/settings) under the `API Token` Section. 
+For the LTM report you will need valid F5 iHealth API credentials (**CLIENT_ID** and **CLIENT_SECRET**).These can be acquired from (https://ihealth.f5.com/qkview-analyzer/settings) under the `API Token` Section. 
+
 The tool supports **two ways** of providing F5 iHealth API credentials:
 
 - **Environment variables** (recommended)
@@ -63,13 +69,13 @@ export CLIENT_ID="your_client_id_here"
 export CLIENT_SECRET="your_client_secret_here"
 ```
 
-2. Once you have the credentials you can run the **create_ltm.py** script to create the LTM report.
+Once you have the credentials you can run the **create_ltm.py** script to create the LTM report.
 
-```bash
-python create_ltm.py \
-  --customer "ACME Bank" \
-  --qkview_id "123456"
-```
+  ```bash
+  python create_ltm.py \
+    --customer "ACME Bank" \
+    --qkview_id "123456"
+  ```
 
 Alternatively you can add your credentials on the CLI like the following example:
 ```bash
@@ -82,13 +88,13 @@ python create_ltm.py \
 
 ### ASM report
 
-1. One or more ASM policy JSON files placed in the **policies/** directory. 
+One or more ASM policy JSON files placed in the **policies/** directory. 
 
 > **IMPORTANT**
 > 
 > The policies needs to be exported from ASM in `FULL` and NOT in `TEMPLATE` mode. 
 
-2. run the Python script, providing the customer name
+Run the Python script, providing the customer name
 
 ```bash
 python create_asm.py --customer "ACME Bank"
