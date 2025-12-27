@@ -36,6 +36,7 @@ Dependencies:
 
 2. Using a virtual environment is strongly recommended.
     ```
+    cd bigip-audit
     python3 -m venv .venv
     source .venv/bin/activate
     ```
