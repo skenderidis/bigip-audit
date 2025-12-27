@@ -72,14 +72,14 @@ export CLIENT_SECRET="your_client_secret_here"
 Once you have the credentials you can run the **create_ltm.py** script to create the LTM report.
 
   ```bash
-  python create_ltm.py \
+  python3 create_ltm.py \
     --customer "ACME Bank" \
     --qkview_id "123456"
   ```
 
 Alternatively you can add your credentials on the CLI like the following example:
 ```bash
-python create_ltm.py \
+python3 create_ltm.py \
   --customer "ACME Bank" \
   --qkview_id "123456" \
   --client_id "your_client_id_here" \
@@ -97,7 +97,7 @@ One or more ASM policy JSON files placed in the **policies/** directory.
 Run the Python script, providing the customer name
 
 ```bash
-python create_asm.py --customer "ACME Bank"
+python3 create_asm.py --customer "ACME Bank"
 ```
 
 ## Examples
