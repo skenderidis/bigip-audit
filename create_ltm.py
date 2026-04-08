@@ -2755,7 +2755,7 @@ parser.add_argument(
     "--client_id",
     "-cid",
     required=False,
-    help="CLIENT ID to be used for iHealth",
+    help="CLIENT SECRET to be used for iHealth",
 )
 parser.add_argument(
     "--client_secret",
@@ -2783,7 +2783,7 @@ if args.client_secret == None:
     except KeyError:
         raise RuntimeError("CLIENT_SECRET is neither set as an environment variable or send through the command line.")
 else:
-    CLIENT_ID = args.client_secret
+    CLIENT_SECRET = args.client_secret
 
 customer_name = args.customer
 
